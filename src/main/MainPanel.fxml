@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="1436.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+   <children>
+      <ImageView fx:id="bk" fitHeight="907.0" fitWidth="1508.0" layoutX="-5.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/background.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="142.0" layoutY="112.0" prefHeight="127.0" prefWidth="1240.0" spacing="10.0" AnchorPane.rightAnchor="54.0">
+         <children>
+            <JFXButton fx:id="btn_Home" buttonType="RAISED" contentDisplay="TOP" lineSpacing="10.0" onAction="#handlSelect" prefHeight="105.0" prefWidth="240.0" ripplerFill="#003cff" style="-fx-background-color: #5ea9ff;" text="TRANG CHỦ" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@../resource/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_Manager" buttonType="RAISED" contentDisplay="TOP" lineSpacing="10.0" onAction="#handlSelect" prefHeight="105.0" prefWidth="240.0" ripplerFill="#003bff" style="-fx-background-color: #5ea9ff;" text="QUẢN LÝ" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@../resource/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_Attend" buttonType="RAISED" contentDisplay="TOP" lineSpacing="10.0" onAction="#handlSelect" prefHeight="105.0" prefWidth="240.0" ripplerFill="#003bff" style="-fx-background-color: #5ea9ff;" text="ĐIỂM DANH" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@../resource/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_Statistic" buttonType="RAISED" contentDisplay="TOP" lineSpacing="10.0" onAction="#handlSelect" prefHeight="105.0" prefWidth="240.0" ripplerFill="#003bff" style="-fx-background-color: #5ea9ff;" text="THỐNG KÊ" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@../resource/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btn_Report" buttonType="RAISED" contentDisplay="TOP" lineSpacing="10.0" onAction="#handlSelect" prefHeight="105.0" prefWidth="240.0" ripplerFill="#003bff" style="-fx-background-color: #5ea9ff;" text="BÁO CÁO" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="60.0">
+                     <image>
+                        <Image url="@../resource/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="307.0" layoutY="28.0" prefHeight="82.0" prefWidth="885.0" style="-fx-background-color: #fff5d3; -fx-background-radius: 20px;">
+         <children>
+            <Label fx:id="softwareName" layoutX="479.0" layoutY="45.0" text="PHẦN MỀM QUẢN LÝ SINH VIÊN">
+               <font>
+                  <Font name="Arial" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="softwareVer" layoutX="1085.0" layoutY="90.0" text="Ver 3.13" />
+      <ImageView fitHeight="834.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/side.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="681.0" prefHeight="153.0" prefWidth="67.0">
+         <children>
+            <MenuButton fx:id="menu_Button" alignment="CENTER" contentDisplay="RIGHT" layoutY="55.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="VN">
+              <items>
+                <MenuItem fx:id="menu_VN" mnemonicParsing="false" onAction="#handlLang" text="VN" />
+                <MenuItem fx:id="menu_EN" mnemonicParsing="false" onAction="#handlLang" text="EN" />
+              </items>
+            </MenuButton>
+            <MenuButton fx:id="menu_Bk" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="55.0" prefWidth="67.0" style="-fx-background-color: transparent;" text="MenuButton">
+              <items>
+                  <MenuItem fx:id="bk_s0" mnemonicParsing="false" onAction="#handlBkChange">
+                     <graphic>
+                        <ImageView fx:id="bk_0" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/s_background.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                <MenuItem fx:id="bk_s1" mnemonicParsing="false" onAction="#handlBkChange">
+                     <graphic>
+                        <ImageView fx:id="bk_1" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/s_background1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                <MenuItem fx:id="bk_s2" mnemonicParsing="false" onAction="#handlBkChange">
+                     <graphic>
+                        <ImageView fx:id="bk_2" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/s_background2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+              </items>
+               <graphic>
+                  <ImageView fx:id="bk_Selected" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/s_background.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <JFXButton fx:id="btn_About" contentDisplay="BOTTOM" layoutX="8.0" layoutY="94.0" onAction="#about" prefHeight="55.0" prefWidth="52.0" text="About">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/about.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="142.0" layoutY="200.0" prefHeight="50.0" prefWidth="1240.0" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Arc fx:id="shadow_1" fill="#0000002d" length="180.0" radiusX="120.0" radiusY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND">
+               <effect>
+                  <Shadow height="26.8" radius="6.2" width="0.0" />
+               </effect>
+            </Arc>
+            <Arc fx:id="shadow_2" fill="#0000002d" length="180.0" radiusX="120.0" radiusY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND">
+               <effect>
+                  <Shadow height="26.8" radius="6.2" width="0.0" />
+               </effect>
+            </Arc>
+            <Arc fx:id="shadow_3" fill="#0000002d" length="180.0" radiusX="120.0" radiusY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND">
+               <effect>
+                  <Shadow height="26.8" radius="6.2" width="0.0" />
+               </effect>
+            </Arc>
+            <Arc fx:id="shadow_4" fill="#0000002d" length="180.0" radiusX="120.0" radiusY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND">
+               <effect>
+                  <Shadow height="26.8" radius="6.2" width="0.0" />
+               </effect>
+            </Arc>
+            <Arc fx:id="shadow_5" fill="#0000002d" length="180.0" radiusX="120.0" radiusY="20.0" stroke="TRANSPARENT" strokeType="INSIDE" type="ROUND">
+               <effect>
+                  <Shadow height="26.8" radius="6.2" width="0.0" />
+               </effect>
+            </Arc>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="about_Panel" layoutX="142.0" layoutY="237.0" prefHeight="583.0" prefWidth="1240.0">
+         <children>
+            <AnchorPane layoutY="9.0" prefHeight="564.0" prefWidth="1240.0" style="-fx-background-color: #2fedc0;">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="546.0" prefWidth="370.0" style="-fx-background-color: #fff5d3; -fx-background-radius: 10px;">
+                     <children>
+                        <Label layoutX="136.0" layoutY="-1.0" prefHeight="50.0" prefWidth="127.0" text="ABOUT US">
+                           <font>
+                              <Font name="UTMCopperplateBold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="50.0" fitWidth="52.0" layoutX="85.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/about.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="233.0" fitWidth="220.0" layoutX="75.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/manager.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="169.0" fitWidth="370.0" layoutX="1.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/banner.png" />
+                           </image>
+                        </ImageView>
+                        <VBox layoutX="21.0" layoutY="318.0" prefHeight="201.0" prefWidth="330.0" spacing="10.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="330.0" text="Đinh Văn Nam" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="UTM Flamenco" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="330.0" text="Hoàng Thanh Sơn" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="UTM Flamenco" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="330.0" text="Phạm Tiến Bắc" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="UTM Flamenco" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="330.0" text="Đào Minh Tùng" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="UTM Flamenco" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="31.0" prefWidth="330.0" text="Đào Duy Khánh" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="UTM Flamenco" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="393.0" layoutY="8.0" prefHeight="546.0" prefWidth="837.0" style="-fx-background-color: #fff5d3; -fx-background-radius: 10px;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="479.0" text="Về phần mềm quản  lý điểm danh sinh viên:">
+                           <font>
+                              <Font name="UTMFacebookK&amp;TBold Italic" size="25.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea editable="false" layoutX="14.0" layoutY="51.0" prefHeight="479.0" prefWidth="807.0" text="- Phần mềm được viết bằng ngôn ngữ Java&#10;- Dữ liệu được xử lý thông qua API, được viết bởi thầy:  Đào Hồng Luyến.&#10;- Giao diện và mã nguồn được viết bởi FOCUS Team&#10;- Thư viện được sử dụng: Gson, JSoup, JavaFX, JFoenix và 1 số thư viện khác&#10;- Phiên bản hiện tại: 3.13&#10;- Tính năng chính:&#10;          + Quản lý danh sách sinh viên, thông tin sinh viên.&#10;          + Điểm danh sinh viên, tạo báo cáo và tự động gửi email thông báo tới sinh viên.&#10;          + Thống kê, báo cáo điểm danh.&#10;- Tính năng đang phát triển:&#10;          + Kênh chat và hệ thống chat dành cho thành viên&#10;          + Quản lý sinh viên theo lớp, theo nhóm&#10;          + Cập nhật ...&#10;&#10;" wrapText="true">
+                           <font>
+                              <Font name="UTM Guanine" size="16.0" />
+                           </font>
+                        </JFXTextArea>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="home_Panel" layoutX="142.0" layoutY="237.0" prefHeight="583.0" prefWidth="1240.0">
+         <children>
+            <AnchorPane blendMode="SRC_ATOP" layoutX="46.0" layoutY="119.0" mouseTransparent="true" prefHeight="360.0" prefWidth="1149.0" style="-fx-background-color: #53e0b5; -fx-background-radius: 15px;">
+               <children>
+                  <ImageView fitHeight="223.0" fitWidth="289.0" layoutX="452.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/manager.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="289.0" fitWidth="541.0" layoutX="304.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/banner.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="manager_Panel" layoutX="142.0" layoutY="237.0" prefHeight="583.0" prefWidth="1240.0">
+         <children>
+            <TableView fx:id="tableView" layoutY="53.0" prefHeight="494.0" prefWidth="1240.0">
+               <columns>
+                  <TableColumn fx:id="col_Stt" prefWidth="46.0" text="Stt" />
+                  <TableColumn fx:id="col_Avatar" prefWidth="183.0" text="Avatar" />
+                  <TableColumn fx:id="col_RollNumber" prefWidth="123.0" text="Số báo danh" />
+                  <TableColumn fx:id="col_Name" prefWidth="246.0" text="Họ và tên" />
+                  <TableColumn fx:id="col_Phone" prefWidth="206.0" text="Số điện thoại" />
+                  <TableColumn fx:id="col_Email" prefWidth="283.0" text="Email" />
+                  <TableColumn fx:id="col_Delete" prefWidth="139.0" text="Xóa" />
+               </columns>
+            </TableView>
+            <AnchorPane layoutY="9.0" prefHeight="38.0" prefWidth="1240.0" style="-fx-background-color: #2fedc0;">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/search.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="130.0" layoutX="136.0" layoutY="5.0" startX="-100.0" stroke="#00000033" strokeWidth="2.0" />
+                  <Arc fill="#1f93ff00" layoutX="36.0" layoutY="19.0" length="180.0" radiusX="14.0" radiusY="15.0" startAngle="90.0" stroke="#00000033" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Line endX="130.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#00000033" strokeWidth="2.0" />
+                  <Arc fill="#1f93ff00" layoutX="267.0" layoutY="19.0" length="180.0" radiusX="14.0" radiusY="15.0" startAngle="270.0" stroke="#00000033" strokeType="INSIDE" strokeWidth="2.0" />
+                  <JFXTextField fx:id="txt_Search" focusColor="#405aa800" layoutX="53.0" layoutY="6.0" prefHeight="25.0" prefWidth="214.0" unFocusColor="#4d4d4d00" />
+                  <JFXButton fx:id="btn_Refresh" buttonType="RAISED" layoutX="1108.0" prefHeight="38.0" prefWidth="128.0" ripplerFill="#0571ff" text="Làm mới">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Line endX="36.0" layoutX="1088.0" layoutY="20.0" rotate="90.0" stroke="#00000016" />
+                  <JFXButton fx:id="btn_AddNew" onAction="#handlAdd" buttonType="RAISED" layoutX="915.0" prefHeight="39.0" prefWidth="186.0" ripplerFill="#0571ff" text="Thêm sinh viên">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="attend_Panel" layoutX="142.0" layoutY="237.0" prefHeight="583.0" prefWidth="1240.0">
+         <children>
+            <TableView fx:id="attend_TableView" layoutY="53.0" prefHeight="494.0" prefWidth="1240.0">
+               <columns>
+                  <TableColumn fx:id="col_AttendStt1" prefWidth="46.0" text="Stt" />
+                  <TableColumn fx:id="col_AttendAvatar1" prefWidth="183.0" text="Avatar" />
+                  <TableColumn fx:id="col_AttendRollNumber1" prefWidth="123.0" text="Số báo danh" />
+                  <TableColumn fx:id="col_AttendName1" prefWidth="246.0" text="Họ và tên" />
+                  <TableColumn fx:id="col_AttendPhone1" prefWidth="206.0" text="Số điện thoại" />
+                  <TableColumn fx:id="col_AttendEmail1" prefWidth="283.0" text="Email" />
+                  <TableColumn fx:id="col_AttendDelete1" prefWidth="139.0" text="Xóa" />
+               </columns>
+            </TableView>
+            <AnchorPane layoutY="9.0" prefHeight="38.0" prefWidth="1240.0" style="-fx-background-color: #2fedc0;">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/search.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="130.0" layoutX="136.0" layoutY="5.0" startX="-100.0" stroke="#00000033" strokeWidth="2.0" />
+                  <Arc fill="#1f93ff00" layoutX="36.0" layoutY="19.0" length="180.0" radiusX="14.0" radiusY="15.0" startAngle="90.0" stroke="#00000033" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Line endX="130.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#00000033" strokeWidth="2.0" />
+                  <Arc fill="#1f93ff00" layoutX="267.0" layoutY="19.0" length="180.0" radiusX="14.0" radiusY="15.0" startAngle="270.0" stroke="#00000033" strokeType="INSIDE" strokeWidth="2.0" />
+                  <JFXTextField fx:id="txt_AttendSearch1" focusColor="#405aa800" layoutX="53.0" layoutY="6.0" prefHeight="25.0" prefWidth="214.0" unFocusColor="#4d4d4d00" />
+                  <JFXButton fx:id="btn_AttendRefresh1" buttonType="RAISED" layoutX="1108.0" prefHeight="38.0" prefWidth="128.0" ripplerFill="#0571ff" text="Làm mới">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Line endX="36.0" layoutX="1088.0" layoutY="20.0" rotate="90.0" stroke="#00000016" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="statistic_Panel" layoutX="142.0" layoutY="237.0" prefHeight="583.0" prefWidth="1240.0">
+         <children>
+            <TableView fx:id="statistic_tableView" layoutY="53.0" prefHeight="494.0" prefWidth="1240.0">
+               <columns>
+                  <TableColumn fx:id="col_StatisticStt" prefWidth="46.0" text="Stt" />
+                  <TableColumn fx:id="col_StatisticAvatar" prefWidth="183.0" text="Avatar" />
+                  <TableColumn fx:id="col_StatisticRollNumber" prefWidth="123.0" text="Số báo danh" />
+                  <TableColumn fx:id="col_StatisticName" prefWidth="246.0" text="Họ và tên" />
+                  <TableColumn fx:id="col_StatisticPhone" prefWidth="206.0" text="Số điện thoại" />
+                  <TableColumn fx:id="col_StatisticEmail" prefWidth="283.0" text="Email" />
+                  <TableColumn fx:id="col_StatisticDelete" prefWidth="139.0" text="Xóa" />
+               </columns>
+            </TableView>
+            <AnchorPane layoutY="9.0" prefHeight="38.0" prefWidth="1240.0" style="-fx-background-color: #2fedc0;">
+               <children>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="report_Panel" layoutX="142.0" layoutY="237.0" prefHeight="583.0" prefWidth="1240.0">
+         <children>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

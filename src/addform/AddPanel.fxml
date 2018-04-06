@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addform.AddPanelController">
+   <children>
+      <ImageView fitHeight="480.0" fitWidth="768.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/add_bk.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="19.0" layoutY="8.0" prefHeight="438.0" prefWidth="723.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="243.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="474.0" minWidth="10.0" prefWidth="473.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="img_Avatar" fitHeight="236.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/default_avatar.png" />
+                     </image>
+                  </ImageView>
+                  <ProgressIndicator fx:id="progressIndicator" prefHeight="45.0" prefWidth="243.0" progress="0.0" />
+                  <JFXButton fx:id="btn_Upload" prefHeight="37.0" prefWidth="243.0" style="-fx-background-color: #5ea9ff;" text="Tải ảnh" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Pane prefHeight="65.0" prefWidth="473.0">
+                     <children>
+                        <Label fx:id="lb_Title" alignment="CENTER" layoutX="14.0" layoutY="1.0" prefHeight="55.0" prefWidth="451.0" text="THÔNG TIN SINH VIÊN">
+                           <font>
+                              <Font name="UTM Banque" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <GridPane alignment="BOTTOM_LEFT" prefHeight="312.0" prefWidth="473.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="168.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lb_Name" prefHeight="37.0" prefWidth="168.0" text="Họ và tên:">
+                           <font>
+                              <Font name="UTMAvoBold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb_RollNumber" prefHeight="37.0" prefWidth="168.0" text="Số báo danh:" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="UTMAvoBold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb_Phone" prefHeight="37.0" prefWidth="168.0" text="Số điện thoại:" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="UTMAvoBold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb_Email" prefHeight="37.0" prefWidth="168.0" text="Email:" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="UTMAvoBold" size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txt_Name" prefHeight="28.0" prefWidth="305.0" text="Đinh Văn Nam" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="UTM Daxline" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_RollNumber" prefHeight="28.0" prefWidth="305.0" text="Đinh Văn Nam" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="UTM Daxline" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_Phone" prefHeight="28.0" prefWidth="305.0" text="Đinh Văn Nam" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="UTM Daxline" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_Email" prefHeight="28.0" prefWidth="305.0" text="Đinh Văn Nam" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="UTM Daxline" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label fx:id="lb_ErrName" prefHeight="29.0" prefWidth="305.0" text="Tên không đúng định dạng." textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="UTM Khuccamta" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb_ErrRollNumber" prefHeight="29.0" prefWidth="305.0" text="Tên không đúng định dạng." textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="UTM Khuccamta" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb_ErrPhone" prefHeight="29.0" prefWidth="305.0" text="Tên không đúng định dạng." textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="UTM Khuccamta" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb_ErrEmail" prefHeight="29.0" prefWidth="305.0" text="Tên không đúng định dạng." textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="UTM Khuccamta" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="64.0" prefWidth="473.0" spacing="50.0">
+                     <children>
+                        <JFXButton fx:id="btn_Add" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #5ea9ff;" text="Thêm" />
+                        <JFXButton fx:id="btn_Refresh" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #5ea9ff;" text="Làm mới" />
+                        <JFXButton fx:id="btn_Exit" prefHeight="36.0" prefWidth="105.0" style="-fx-background-color: #5ea9ff;" text="Thoát" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
